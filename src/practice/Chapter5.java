@@ -1,31 +1,27 @@
 package practice;
 
 import java.time.LocalDate;
-import java.util.LinkedHashMap;
-import java.util.Map;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-
-public class Chapter5 extends Task {
+public class Chapter5{
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
 		
+		List<Task> tasks = new ArrayList<>();
+		tasks.add(new Task(LocalDate.of(2021,  10, 21), "牛乳を買う"));
+		tasks.add(new Task(LocalDate.of(2021,  9, 15), "○○社面談"));
+		tasks.add(new Task(LocalDate.of(2021,  12, 4), "手帳を買いに行く"));
+		tasks.add(new Task(LocalDate.of(2021,  8, 10), "散髪に行く"));
+		tasks.add(new Task(LocalDate.of(2021,  11, 9), "スクールの課題を解く"));
 		
-		Map<LocalDate, String> tasks = new LinkedHashMap<>();
+		Collections.sort(tasks);
 		
-		
-		
-		tasks.put(str1, s1);
-		tasks.put(str2, s2);
-		tasks.put(str3, s3);
-		tasks.put(str4, s4);
-		tasks.put(str5, s5);
-		
-		for (Map.Entry<LocalDate, String> task : tasks.entrySet()) {
-			  System.out.println(task.getkey() + ":"  + task.getvalue()); 
-			}
-
-
-	}
+		for (Task task : tasks) {
+			System.out.println(task);
+		}
+	}	
 
 }
