@@ -14,16 +14,16 @@ public class Task implements Comparable<Task> {
 	}
 	
 	public LocalDate getDate() {
-		return date;
+		return this.date;
 	}
 	
 	public String getContent() {
-		return content;
+		return this.content;
 	}
 	
 	@Override 
 	public String toString() {
-		return date + ":" + content;
+		return this.date + ":" + this.content;
 	}
 	
 	@Override
